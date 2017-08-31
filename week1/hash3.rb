@@ -1,5 +1,5 @@
-def convert_hash_to_s(h)
-  h.invert.map{|k,v| [k.to_s, v.to_s]}.to_h
+def sorted_array(h)
+  h.values.sort
 end
-p convert_hash_to_s({ a: 1, b: 2, c: 3 })
-# { a: 1, b: 2, c: 3 } => { "1"=>"a", "2"=>"b", "3"=>"c" }
+p sorted_array({a:2, b:5, c:1})
+# { a: 2, b: 5, c: 1 } => [1, 2, 5]
